@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'kendra-sample'`, () => {
+  it(`should have as title 'cognito-sample'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('kendra-sample');
+    expect(app.title).toEqual('cognito-sample');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('kendra-sample app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('cognito-sample app is running!');
   });
 });

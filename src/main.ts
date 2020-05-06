@@ -9,9 +9,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-Amplify.configure({
-  Auth: environment.authOptions
-})
+Amplify.configure({Auth: environment.authOptions});
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));

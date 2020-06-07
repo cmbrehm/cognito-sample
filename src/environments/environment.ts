@@ -1,20 +1,22 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+/* Fill in the appropriate fields below
+ * USER POOL ID: ID of the Cognito User Pool, ex 'us-east-1_cWLZAk0pS'
+ * USER WEB CLIENT ID: ID of the configured App Client ex. '64os16d3e1fok5nl9uh3rvwm7e'
+ * USER DOMAIN: Hostname of the configured Cognito domain URL ex 'aws-test.auth.us-east-1.amazonco'
+*/
 
 export const environment = {
   production: false,
   authOptions: {
     //identityPoolId: 'us-east-1:4c0a73e5-4a1b-4eb0-8004-69b88b698d3a',
     //region: 'us-east-1',
-    userPoolId: 'us-east-1_cWLZAk0pW',
-    userPoolWebClientId: '64os16d3e1fok5nl9uh3rvvm7e',
+    userPoolId: '<USER POOL ID>',
+    userPoolWebClientId: '<USER WEB CLIENT ID>',
     oauth: {
-      domain: 'brehmcla-aam-demo.auth.us-east-1.amazoncognito.com',
+      domain: '<USER DOMAIN>.auth.us-east-1.amazoncognito.com',
       scope: [ 'profile', 'email' ],
       redirectSignIn: 'http://localhost:4200/',
       redirectSignOut: 'http://localhost:4200/',
-      responseType: 'code'
+      responseType: 'token'
     }
   }
 };
@@ -26,4 +28,4 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+import 'zone.js/dist/zone-error';  // Included with Angular CLI.

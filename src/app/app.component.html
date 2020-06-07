@@ -1,6 +1,9 @@
 <div>
   <ng-container *ngIf="user; else loginButton">
-    Hello {{user.signInUserSession.idToken.payload.email}}
+    <span>Hello <b>{{user.signInUserSession.idToken.payload.email}}</b>! </span>
+    <div>
+    You are now logged in to the Amazon Cognito User Pool
+    </div>
   </ng-container>
 </div>
 <ng-template #loginButton>
